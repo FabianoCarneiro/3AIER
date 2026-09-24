@@ -4,7 +4,7 @@ Esse projeto tem a finalidade de ser um esqueletobase para nossos agentes de IA 
 
 ---
 
-## 1. Rodar em 5 minutos
+## 1. Rodar em 5. minutos
 
 ### Passo 1 — baixar o projeto
 
