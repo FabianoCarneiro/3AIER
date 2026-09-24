@@ -1,0 +1,43 @@
+# CODEOWNERS — sistema multiagente (agentebase_template)
+#
+# Define quem precisa revisar (e aprovar) mudanças em cada parte do
+# repositório. O GitHub casa a última regra que der match no caminho —
+# por isso as regras mais específicas ficam por último.
+#
+# Formato: <padrão de caminho>   @usuario-ou-time  [@usuario-ou-time ...]
+#
+# Hoje o projeto tem um único mantenedor (@itaborai83), então todas as
+# regras apontam para ele. A separação por área já está pronta: quando
+# outra pessoa assumir uma parte (ex.: alguém cuidando só dos prompts,
+# ou só do motor do agente), troque o dono daquela linha — o resto do
+# arquivo não muda.
+
+# Dono padrão — qualquer coisa não coberta por uma regra mais específica
+# abaixo cai para o mantenedor do projeto.
+*                       @itaborai83
+
+# --- Motor do agente (o loop, integração com o modelo, interface) -----
+# Mudar aqui muda o COMPORTAMENTO do agente para qualquer persona.
+agent.py                @itaborai83
+app.py                  @itaborai83
+
+# --- Prompts / personas (o "quem" de cada agente) ---------------------
+# Cada arquivo é um agente publicável. Revisão de prompt é revisão de
+# produto: quem aprova precisa entender a persona, não só sintaxe.
+agent.md                @itaborai83
+agent-ada.md            @itaborai83
+agent-lint.md           @itaborai83
+agent-val.md            @itaborai83
+
+# --- Memória / conhecimento injetado no prompt -------------------------
+memory.md                @itaborai83
+
+# --- Dependências e ambiente --------------------------------------------
+requirements.txt         @itaborai83
+
+# --- Governança do repositório (CI, templates, regras de review) -------
+/.github/                @itaborai83
+CODEOWNERS               @itaborai83
+
+# --- Documentação --------------------------------------------------------
+README.md                @itaborai83
